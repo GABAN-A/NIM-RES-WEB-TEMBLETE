@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/NAVBAR.HTML# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .body {
+        background-color: rgb(250, 240, 220);
+    }
+
+    .con {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: rgb(250, 240, 220);
+        color: white;
+        height: 90px;
+        padding: 5pxs;
+    }
+
+    .logo {
+        width: 250px;
+        height: 85px;
+    }
+
+    .TIME {
+        align-self: center;
+        color: black;
+        font-size: 1.3Rem;
+        margin-right: 20px;
+        font-family: 'Bellefair', serif;
+    }
+
+    .row {
+        align-self: center;
+    }
+
+    .a2,
+    .a1 {
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+        font-family: 'Bellefair', serif;
+        font-weight: bold;
+        font-size: 2.3rem;
+        margin: 10px;
+        padding: 6px;
+    }
+
+    .a1 {
+        background-color: rgb(92, 133, 107);
+    }
+
+    .a2:hover {
+        background-color: rgb(92, 133, 107);
+        padding: 6px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /*slider styling*/
+    .slideshow-container {
+        position: relative;
+        height: 60vh;
+        display: inline-flex;
+        overflow: hidden;
+        scrollbar-width: none;
+        will-change: transform;
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+        box-shadow: 0px 0px 20px hsl(63, 70%, 62%);
+    }
+
+    /* box-shadow: 0px 0px 20px #f2f2f2;
+        width: 100%;
+        height: 400px;
+        position: relative;
+        margin: auto;
+        object-fit: contain;
+        overflow: hidden;
+    } */
+    .Slide {
+        display: none;
+    }
+
+    .img1 {
+        vertical-align: middle;
+        max-height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 10px;
+        background-color: #dfe2b5;
+        color: #f2f2f2;
+        font-weight: bolder;
+        font-size: 18px;
+        transform: translateY(-100%);
+    }
+
+    .next {
+        right: 0;
+    }
+
+
+    .prev:hover,
+    .next:hover {
+        color: #f2f2f2;
+        background-color: #8cbf3f
+    }
+
+    .text {
+        color: white;
+        font-family: 'Bellefair', serif;
+        font-weight: 700;
+        font-size: 2.4rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        animation-name: text1;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes text1 {
+        from {
+            top: 100%;
+        }
+
+        to {
+            top: 10%;
+        }
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #f2f2f2;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color .6s ease
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #9453a6
+    }
+
+    .d2 {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgb(250, 240, 220);
+        flex-wrap: wraps;
+        height: fit-content;
+        align-items: center;
+    }
+
+    .img2 {
+        display: flex;
+        width: 80%;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        background-color: rgb(82, 134, 99);
+        padding-top: 20px;
+border-bottom:5px solid #f2cc0f;
+    }
+
+    .footer1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 10px;
+        padding-bottom: 10px;
+        gap: 70px;
+
+    }
+
+    .f1 {
+
+        width: 40px;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .f1:hover {
+        background-color: rgb(219, 217, 111);
+        padding: 5px;
+        width: 45px;
+        border-radius: 50%;
+    }
+
+    .nimr {
+        border-top: 3PX solid #f2cc0f;
+        text-shadow:0px 0px 20px #ebe26d;
+        line-height: 1.4;
+        color: rgb(239, 238, 210);
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Bellefair', serif;
+        
+    }
+    .nimr2{
+        color: rgb(239, 238, 210);
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Bellefair', serif;
+        font-size: 1.2rem;
+    }
+    .nimr-top{
+        margin-top:20px; 
+    }
+    @media only screen and (max-width:650px) {
+
+        .nav {
+            display: flex;
+            color: black;
+            align-self: center;
+            font-size: 3rem;
+        }
+
+        .logo {
+            width: 190px;
+            height: 110px;
+            margin-left: 3px;
+        }
+
+        .TIME {
+            text-align: center;
+            color: rgb(120, 155, 111);
+            font-size: 0.9rem;
+            width: 20%;
+
+        }
+
+        .a2,
+        .a1 {
+            list-style-type: none;
+            text-decoration: none;
+            background-color: #f2cc0f;
+            line-height: 1.5;
+        }
+
+        .row {
+            display: none;
+            font-size: 2rem;
+            background: #f2cc0f;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 200px;
+
+        }
+
+        .row.active {
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            z-index: 20;
+        }
+
+        .con {
+            width: 100%;
+            display: flex;
+            height: 110px;
+            justify-content: space-around;
+            background-color: rgb(248, 245, 200);
+        }
+
+        .slideshow-container {
+            box-shadow: 0px 0px 20px #f2f2f2;
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin: auto;
+            object-fit: contain;
+            overflow: hidden;
+        }
+
+        img1 {
+            vertical-align: middle;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .prev,
+        .next {
+            font-size: 13px;
+        }
+    }
+</style></head>
+
+
+
+
+<body cz-shortcut-listen="true">
+
+    <div class="con">
+        <div><img class="logo" src="./Document_files/logo1.png" alt="logo"></div>
+        <div class="TIME">
+            <h1>It's Nimr Time</h1>
+        </div>
+        <div class="nav"> ☰</div>
+
+        <div class="row">
+            <a class="a1" href="http://127.0.0.1:5500/NAVBAR.HTML">ראשי</a>
+            <a class="a2" href="https://www.google.com/">תפריט</a>
+            <a class="a2" href="https://www.google.com/">דרושים</a>
+            <a class="a2" href="https://www.google.com/">צור קשר</a>
+        </div>
+    </div>
+
+    <div class="body">
+        <div class="slideshow-container">
+            <div class="slideshow-inner">
+                <div class="mySlides fade" style="display: none;">
+                    <img class="img1" src="./Document_files/1.jpg" alt="sally lightfoot crab">
+                    <div class="text">להזמנות</div>
+                </div>
+
+                <div class="mySlides fade" style="display: none;">
+
+                    <img class="img1" src="./Document_files/12.jpg" alt="mardi gras1">
+                    <div class="text">טעים טרי אורגני</div>
+                </div>
+
+                <div class="mySlides fade" style="display: none;">
+
+                    <img class="img1" src="./Document_files/3.jpg" alt="mardi gras">
+                    <div class="text">Mardi Gras great joy</div>
+                </div>
+
+                <div class="mySlides fade" style="display: block;">
+
+                    <img class="img1" src="./Document_files/4.jpg" alt="mardi gras love">
+                    <div class="text">Mardi Gras kankon wings</div>
+
+                </div>
+                <div class="mySlides fade" style="display: none;">
+
+                    <img class="img1" src="./Document_files/5.jpg" alt="mardi gras love">
+                    <div class="text">Mardi Gras new tomamao mask</div>
+
+                </div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot active" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+    <div class="d2">
+        <a><img class="img2" src="./Document_files/11.png" alt=""></a>
+
+        <a><img class="img2" src="./Document_files/112.png" alt=""></a>
+
+        <a><img class="img2" src="./Document_files/113.png" alt=""></a>
+
+        <a href="https://goo.gl/maps/uw7sd5SBjHVv1fCa9" target="_blank"> <img class="img2" src="./Document_files/114.png" alt=""></a>
+
+    </div>
+    <footer>
+
+        <div class="footer1">
+            <a href="https://www.instagram.com/shawarma_nimer" target="_blank"><img class="f1" src="./Document_files/black-instagram-logo-3496.svg"></a>
+            <a href="https://www.facebook.com/NIMR.RESTAURANT.AND.SHAWARMA/" target="_blank"><img class="f1" src="./Document_files/facebook-2869.svg"></a>
+            <a href="https://www.waze.com/en/live-map/directions/israel/%D7%9E%D7%97%D7%95%D7%96-%D7%94%D7%A6%D7%A4%D7%95%D7%9F/%D7%98%D7%95%D7%A8%D7%A2%D7%90%D7%9F/nimer-shawarma-restaurant?place=ChIJ08jYvhJIHBUR-439RIDWg48&amp;utm_campaign=waze_website&amp;utm_medium=website_menu&amp;utm_source=waze_website" target="_blank"><img class="f1" src="./Document_files/PngItem_2068888.png"></a>
+            <a href="tel:04-6412445"><img class="f1" src="./Document_files/phone-5968.svg"></a>
+        </div>
+        <div class="nimr">
+            <h2>מסעדת ושווארמה נימר</h2>
+            <h3>04-6412445</h3>
+            <h4>Nimer<br>Restaurant &amp; Shawarma</h4>
+        </div>
+        <h5 class="nimr2 nimr-top">Copyright © 2021 A.G.PLAST</h5>
+        <h6 class="nimr2">All Rights Reserved. Developed By Aref Gaban</h6>
+    </footer>
+
+    <script>
+        function Open() {
+            window.open("https://www.google.com", "_blank");
+        }
+        const toggleButton = document.getElementsByClassName('nav')[0]
+        const navLinks = document.getElementsByClassName('row')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active')
+        })
+
+        //slidcontainer//
+        var slideIndex = 1;
+
+        var myTimer;
+
+        var slideshowContainer;
+
+        window.addEventListener("load", function () {
+            showSlides(slideIndex);
+            myTimer = setInterval(function () {
+                plusSlides(1)
+            }, 7000);
+
+            //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+
+            //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+            // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+
+            slideshowContainer.addEventListener('mouseenter', pause)
+            slideshowContainer.addEventListener('mouseleave', resume)
+        })
+
+        // NEXT AND PREVIOUS CONTROL
+        function plusSlides(n) {
+            clearInterval(myTimer);
+            if (n < 0) {
+                showSlides(slideIndex -= 1);
+            } else {
+                showSlides(slideIndex += 1);
+            }
+
+            //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+
+            if (n === -1) {
+                myTimer = setInterval(function () {
+                    plusSlides(n + 2)
+                }, 7000);
+            } else {
+                myTimer = setInterval(function () {
+                    plusSlides(n + 1)
+                }, 7000);
+            }
+        }
+
+        //Controls the current slide and resets interval if needed
+        function currentSlide(n) {
+            clearInterval(myTimer);
+            myTimer = setInterval(function () {
+                plusSlides(n + 1)
+            }, 7000);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        //button//
+        function openTab(url) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        }
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
